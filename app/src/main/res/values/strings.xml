@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PalmGuard</string>
+    <string name="home_screen_headline">Sembuhkan Tanaman Sawit Anda!</string>
+    <string name="home_screen_headline_take_pic">Ambil Gambar</string>
+    <string name="homescreen_headline_analyze">Analisis Hasil</string>
+    <string name="homescreen_button_explanation">Baca Penjelasan Penyakit Brown Spots</string>
+    <string name="homescreen_btn_use_camera">Gunakan Kamera</string>
+    <string name="homescreen_btn_use_gallery">Ambil Dari Galeri</string>
+    <string name="homescreen_cv_description">Baca Tentang Penyakit Brown Spots Pada Daun Tanaman Sawit</string>
+    <string name="homescreen_tv_headline_history">Hasil Analisis Terakhir</string>
+    <string name="homescreen_tv_history_date">11 November 2023</string>
+    <string name="homescreen_tv_history_diagnose">Brown Spots</string>
+    <string name="tv_menubar_home">Beranda</string>
+    <string name="tv_menubar_history">Riwayat</string>
 </resources>
