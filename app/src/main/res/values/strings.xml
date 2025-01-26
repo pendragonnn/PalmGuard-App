@@ -12,4 +12,8 @@
     <string name="homescreen_tv_history_diagnose">Brown Spots</string>
     <string name="tv_menubar_home">Beranda</string>
     <string name="tv_menubar_history">Riwayat</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="diagnose_button_information">Informasi Selengkapnya</string>
+    <string name="diagnose_title">Brown Spots</string>
 </resources>
