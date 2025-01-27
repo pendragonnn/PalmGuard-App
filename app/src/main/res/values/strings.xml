@@ -17,4 +17,8 @@
     <string name="diagnose_button_information">Informasi Selengkapnya</string>
     <string name="diagnose_title">Brown Spots</string>
     <string name="tv_history_headline">Riwayat Deteksi</string>
+    <string name="tv_detail_temp_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit eos illo cupiditate, placeat odit dicta similique expedita enim in suscipit, tenetur hic aliquam ad fugiat quaerat.</string>
+    <string name="tv_detail_headline_sickness">Penjelasan Penyakit</string>
+    <string name="tv_detail_headline_prevention">Pencegahan</string>
+    <string name="tv_detail_headline_recommendation">Rekomendasi Penanganan</string>
 </resources>
