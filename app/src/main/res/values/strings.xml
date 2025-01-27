@@ -16,4 +16,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="diagnose_button_information">Informasi Selengkapnya</string>
     <string name="diagnose_title">Brown Spots</string>
+    <string name="tv_history_headline">Riwayat Deteksi</string>
 </resources>
