@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/bt_history_back"
+            android:id="@+id/bt_detail_explanation_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/general_back_arrow_ic"

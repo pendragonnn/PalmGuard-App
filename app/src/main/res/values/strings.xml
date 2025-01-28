@@ -21,4 +21,6 @@
     <string name="tv_detail_headline_sickness">Penjelasan Penyakit</string>
     <string name="tv_detail_headline_prevention">Pencegahan</string>
     <string name="tv_detail_headline_recommendation">Rekomendasi Penanganan</string>
+    <string name="tv_error_headline">Kesalahan Deteksi</string>
+    <string name="bt_error_text">Ambil Gambar Ulang</string>
 </resources>

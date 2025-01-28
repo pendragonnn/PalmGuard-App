@@ -1,6 +1,9 @@
 package com.example.palmguard
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,6 +25,8 @@ class DiagnoseScreenActivity : AppCompatActivity() {
 
         val vp_diagnose: ViewPager2 = findViewById(R.id.vp_diagnose)
         val tl_diagnose: TabLayout = findViewById(R.id.tl_diagnose)
+        val bt_diagnose_result_information: Button = findViewById(R.id.bt_diagnose_result_information)
+        val bt_diagnose_back: ImageView = findViewById(R.id.bt_diagnose_back)
 
         vp_diagnose.adapter = ViewPagerAdapter(this)
         TabLayoutMediator(tl_diagnose, vp_diagnose) { tab, position ->
@@ -31,5 +36,14 @@ class DiagnoseScreenActivity : AppCompatActivity() {
             }
         }.attach()
 
+        bt_diagnose_result_information.setOnClickListener {
+            Intent(this, DetailExplanationScreenActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        bt_diagnose_back.setOnClickListener {
+            finish()
+        }
     }
 }

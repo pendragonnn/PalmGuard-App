@@ -19,9 +19,6 @@
             android:name=".DetailExplanationScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".HistoryScreenActivity"
-            android:exported="false" />
-        <activity
             android:name=".DiagnoseScreenActivity"
             android:exported="false" />
         <activity
