@@ -13,19 +13,19 @@
         android:theme="@style/Theme.PalmGuard"
         tools:targetApi="31">
         <activity
-            android:name=".ErrorDetectionScreenActivity"
+            android:name=".ui.errorDetection.ErrorDetectionScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailExplanationScreenActivity"
+            android:name=".ui.diseaseDetail.DetailExplanationScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".DiagnoseScreenActivity"
+            android:name=".ui.diagnose.DiagnoseScreenActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".ui.splashScreen.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

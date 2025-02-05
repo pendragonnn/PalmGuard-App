@@ -1,4 +1,4 @@
-package com.example.palmguard.data.di
+package com.example.palmguard.di
 
 import android.content.Context
 import com.example.palmguard.data.local.room.HistoryDatabase

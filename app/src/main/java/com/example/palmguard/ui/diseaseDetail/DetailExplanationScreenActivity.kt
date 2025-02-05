@@ -1,12 +1,12 @@
-package com.example.palmguard
+package com.example.palmguard.ui.diseaseDetail
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.palmguard.R
 
 class DetailExplanationScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

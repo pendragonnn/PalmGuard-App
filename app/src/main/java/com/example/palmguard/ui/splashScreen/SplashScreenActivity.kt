@@ -1,27 +1,35 @@
-package com.example.palmguard
+package com.example.palmguard.ui.splashScreen
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.palmguard.MainActivity
+import com.example.palmguard.R
 
-class ErrorDetectionScreenActivity : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_error_detection_screen)
+        setContentView(R.layout.activity_splash_screen)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val bt_error_back: ImageView = findViewById(R.id.bt_error_back)
+        Handler(Looper.getMainLooper()).postDelayed({
+            goToMainActivity()
+        }, 3000L)
+    }
 
-        bt_error_back.setOnClickListener {
+    private fun goToMainActivity() {
+        Intent(this, MainActivity::class.java).also {
+            startActivity(it)
             finish()
         }
     }

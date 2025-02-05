@@ -1,14 +1,13 @@
 package com.example.palmguard
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.FrameLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.palmguard.ui.history.FragmentHistoryScreen
+import com.example.palmguard.ui.home.FragmentHomeScreen
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
