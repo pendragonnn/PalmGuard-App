@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.example.palmguard.R
+import com.example.palmguard.databinding.FragmentDiagnoseBinding
+import com.example.palmguard.databinding.FragmentHistoryScreenBinding
 import com.example.palmguard.ui.diagnose.DiagnoseScreenActivity
 
 /**
@@ -19,6 +21,8 @@ class FragmentHistoryScreen : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var _bindingHistory: FragmentHistoryScreenBinding? = null
+    private val binding get() = _bindingHistory!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,18 +37,23 @@ class FragmentHistoryScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history_screen, container, false)
+        _bindingHistory = FragmentHistoryScreenBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val cv_history: CardView = view.findViewById(R.id.cv_history)
-        cv_history.setOnClickListener {
+        binding.cvHistory.setOnClickListener {
             Intent(requireContext(), DiagnoseScreenActivity::class.java).also {
                 startActivity(it)
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _bindingHistory = null
     }
 
     companion object {

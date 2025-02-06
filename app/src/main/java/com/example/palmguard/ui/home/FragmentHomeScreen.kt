@@ -9,6 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.example.palmguard.ui.diseaseDetail.DetailExplanationScreenActivity
 import com.example.palmguard.R
+import com.example.palmguard.databinding.FragmentHomeScreenBinding
 import com.example.palmguard.ui.diagnose.DiagnoseScreenActivity
 import com.example.palmguard.ui.diagnose.RecommendationFragment
 import com.example.palmguard.ui.errorDetection.ErrorDetectionScreenActivity
@@ -23,6 +24,9 @@ class FragmentHomeScreen : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _bindingHome: FragmentHomeScreenBinding? = null
+    private val binding get() = _bindingHome!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -36,33 +40,35 @@ class FragmentHomeScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_screen, container, false)
+        _bindingHome = FragmentHomeScreenBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val cv_history: CardView = view.findViewById(R.id.cv_history)
-        val cv_explanation: CardView = view.findViewById(R.id.cv_explanation)
-        val cv_headline: CardView = view.findViewById(R.id.cv_headline)
-
-        cv_history.setOnClickListener {
+        binding.cvHistory.setOnClickListener {
             Intent(requireContext(), DiagnoseScreenActivity::class.java).also {
                 startActivity(it)
             }
         }
 
-        cv_explanation.setOnClickListener {
+        binding.cvExplanation.setOnClickListener {
             Intent(requireContext(), DetailExplanationScreenActivity::class.java).also {
                 startActivity(it)
             }
         }
 
-        cv_headline.setOnClickListener {
+        binding.cvHeadline.setOnClickListener {
             Intent(requireContext(), ErrorDetectionScreenActivity::class.java).also {
                 startActivity(it)
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _bindingHome = null
     }
 
     companion object {

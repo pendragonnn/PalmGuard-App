@@ -11,41 +11,39 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.example.palmguard.ui.diseaseDetail.DetailExplanationScreenActivity
 import com.example.palmguard.R
+import com.example.palmguard.databinding.ActivityDiagnoseScreenBinding
 import com.example.palmguard.foundation.adapter.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class DiagnoseScreenActivity : AppCompatActivity() {
+    private lateinit var bindingDiagnose: ActivityDiagnoseScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_diagnose_screen)
+        bindingDiagnose = ActivityDiagnoseScreenBinding.inflate(layoutInflater)
+        setContentView(bindingDiagnose.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val vp_diagnose: ViewPager2 = findViewById(R.id.vp_diagnose)
-        val tl_diagnose: TabLayout = findViewById(R.id.tl_diagnose)
-        val bt_diagnose_result_information: Button = findViewById(R.id.bt_diagnose_result_information)
-        val bt_diagnose_back: ImageView = findViewById(R.id.bt_diagnose_back)
-
-        vp_diagnose.adapter = ViewPagerAdapter(this)
-        TabLayoutMediator(tl_diagnose, vp_diagnose) { tab, position ->
+        bindingDiagnose.vpDiagnose.adapter = ViewPagerAdapter(this)
+        TabLayoutMediator(bindingDiagnose.tlDiagnose, bindingDiagnose.vpDiagnose) { tab, position ->
             when(position) {
                 0 -> tab.text = "Diagnose"
                 1 -> tab.text = "Recommendation"
             }
         }.attach()
 
-        bt_diagnose_result_information.setOnClickListener {
+        bindingDiagnose.btDiagnoseResultInformation.setOnClickListener {
             Intent(this, DetailExplanationScreenActivity::class.java).also {
                 startActivity(it)
             }
         }
 
-        bt_diagnose_back.setOnClickListener {
+        bindingDiagnose.btDiagnoseBack.setOnClickListener {
             finish()
         }
     }

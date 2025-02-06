@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/margin_screen"
     tools:context=".ui.diseaseDetail.DetailExplanationScreenActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,6 +15,8 @@
             android:id="@+id/bt_detail_explanation_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_screen"
+            android:layout_marginTop="@dimen/margin_screen"
             android:src="@drawable/general_back_arrow_ic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,9 +29,10 @@
             android:textStyle="bold"
             android:textSize="24sp"
             android:text="@string/diagnose_title"
-            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/margin_screen"
             android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@+id/bt_history_back"
+            app:layout_constraintTop_toTopOf="@+id/bt_detail_explanation_back"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_detail_explanation_back"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <androidx.cardview.widget.CardView
@@ -39,6 +41,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="10dp"
             android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="@dimen/margin_screen"
             app:layout_constraintTop_toBottomOf="@id/tv_headline_detail">
             <ImageView
                 android:id="@+id/iv_detail_img"
@@ -57,6 +60,7 @@
             android:textSize="18sp"
             android:text="@string/tv_detail_headline_sickness"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="@dimen/margin_screen"
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@+id/cv_detail_img"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -65,6 +69,7 @@
             android:id="@+id/tv_headline_sickness_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_screen"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:text="@string/tv_detail_temp_text"
@@ -82,6 +87,7 @@
             android:textSize="18sp"
             android:text="@string/tv_detail_headline_prevention"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="@dimen/margin_screen"
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@+id/tv_headline_sickness_desc"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -91,6 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:layout_marginHorizontal="@dimen/margin_screen"
             android:textSize="16sp"
             android:text="@string/tv_detail_temp_text"
             android:layout_marginTop="10dp"
@@ -107,6 +114,7 @@
             android:textSize="18sp"
             android:text="@string/tv_detail_headline_recommendation"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="@dimen/margin_screen"
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@+id/tv_headline_prevention_desc"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -117,6 +125,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="16sp"
+            android:layout_marginHorizontal="@dimen/margin_screen"
             android:text="@string/tv_detail_temp_text"
             android:layout_marginTop="10dp"
             android:justificationMode="inter_word"

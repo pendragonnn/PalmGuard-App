@@ -7,21 +7,25 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.palmguard.R
+import com.example.palmguard.databinding.ActivityDetailExplanationScreenBinding
 
 class DetailExplanationScreenActivity : AppCompatActivity() {
+    private lateinit var bindingDetailExplanation: ActivityDetailExplanationScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_detail_explanation_screen)
+        bindingDetailExplanation = ActivityDetailExplanationScreenBinding.inflate(layoutInflater)
+        setContentView(bindingDetailExplanation.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val bt_detail_explanation_back: ImageView = findViewById(R.id.bt_detail_explanation_back)
+        bindingDetailExplanation.root.setPadding(16, 16, 16, 16)
 
-        bt_detail_explanation_back.setOnClickListener {
+        bindingDetailExplanation.btDetailExplanationBack.setOnClickListener {
             finish()
         }
     }
